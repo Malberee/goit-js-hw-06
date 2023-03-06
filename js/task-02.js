@@ -8,16 +8,16 @@ const ingredients = [
 ];
 
 const ingredientsListRef = document.querySelector('#ingredients')
-const ingredientsArray = []
-
-ingredients.forEach(ingredient => {
+const ingredientsArray = ingredients.map(ingredient => {
   const ingredientItemRef = document.createElement('li')
 
   ingredientItemRef.textContent = ingredient
 
   ingredientItemRef.classList.add('item')
   
-  ingredientsArray.push(ingredientItemRef)
+  return ingredientItemRef
 })
+
+
 
 ingredientsListRef.append(...ingredientsArray)

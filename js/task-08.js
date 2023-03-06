@@ -6,10 +6,9 @@ formRef.addEventListener('submit', event => {
     const { elements: { email, password } } = event.currentTarget
     
     if (email.value === '' || password.value === '') {
-        alert('Все поля должны быть заполнены')
-    } else {
-        const formData = { email: email.value, password: password.value }
-        console.log(formData)
-        event.currentTarget.reset()
-    }
+        return alert('Все поля должны быть заполнены')
+    } 
+    const formData = { email: email.value, password: password.value }
+    console.log(formData)
+    event.currentTarget.reset()
 })

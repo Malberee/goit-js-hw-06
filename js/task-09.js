@@ -9,6 +9,7 @@ const bodyRef = document.querySelector('body')
 const spanRef = document.querySelector('span.color')
 
 buttonRef.addEventListener('click', event => {
-  bodyRef.style.backgroundColor = getRandomHexColor()
-  spanRef.textContent = `${getRandomHexColor()}`
+  const randomColor = getRandomHexColor()
+  bodyRef.style.backgroundColor = randomColor
+  spanRef.textContent = `${randomColor}`
 })
